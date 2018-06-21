@@ -1,14 +1,15 @@
 <header>
   <nav>
     <h1>INDiEAN</h1>
-    <div>
-      <input type="text">
+    
+    <div id="search">
+      <mat-form-field class="full-width">
+        <input matInput id="search-inp" placeholder="검색">
+      </mat-form-field>
     </div>
-aa
+
     <ul>
-  <li >a</li>
-  <li >b</li>
-  <li >c</li>
+  <li class="item-box" (click)="openDial()">Login</li>
 </ul>
 </nav>
 </header>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {DialLoginComponent} from '../dial-login/dial-login.component';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openDial():void{
+let dialogRef=this.dialog.open(DialLoginComponent,{width:'50%',height:'50%',panelClass:'myapp-no-padding-dialog'});
+
   }
 
 }
