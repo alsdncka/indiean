@@ -1,3 +1,18 @@
 .mat-tab-label-content{
     background-color: #333333;
 }
+.tab-body{
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    
+}
+#sign-bt{
+    width: 200px;
+    position: absolute;
+    bottom: 30px;
+    background-color: #333333;
+    
+    color:white;
+}

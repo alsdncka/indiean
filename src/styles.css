@@ -13,6 +13,21 @@ a:hover, a:active, a:focus { text-decoration:underline }
 
 .item-box{cursor: pointer;}
 .full-width{width: 100%;}
-.myapp-no-padding-dialog .mat-dialog-container{
+.dialog .mat-dialog-container{
     padding: 0px;
+  }
+  .dialog .mat-tab-labels{
+      background-color: #333333;
+  }
+  .dialog .mat-tab-label{
+    background-color: black;
+    color:white;
+    opacity: 1;
+  }
+  .dialog .mat-tab-label-active{
+    background-color: black;
+      color:white;
+  }
+  .dialog .mat-tab-group,.dialog .mat-tab-group,.dialog .mat-tab-body-wrapper{
+      height: 100%;
   }

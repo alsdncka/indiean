@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openDial():void{
-let dialogRef=this.dialog.open(DialLoginComponent,{width:'50%',height:'50%',panelClass:'myapp-no-padding-dialog'});
+let dialogRef=this.dialog.open(DialLoginComponent,{width:'50%',maxWidth:'500px' ,height:'50%',panelClass:'dialog'});
 
   }
 
