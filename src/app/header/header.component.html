@@ -1,15 +1,23 @@
 <header>
-  <nav>
-    <h1>INDiEAN</h1>
-    
-    <div id="search">
-      <mat-form-field class="full-width">
-        <input matInput id="search-inp" placeholder="검색">
-      </mat-form-field>
+  <div class="header-con">
+    <div>
+        <div class="logo">
+            INDiEAN
+          </div>
+          <div class="user" (click)="openDial();">
+            <p>LOGIN</p>
+          </div>
     </div>
-
+ 
+  <div class="nav">
     <ul>
-  <li class="item-box" (click)="openDial()">Login</li>
-</ul>
-</nav>
+      <li>
+        FEED
+      </li>
+      <li>
+          FORU
+        </li>
+    </ul>
+  </div>
+</div>
 </header>

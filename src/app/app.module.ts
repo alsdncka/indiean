@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+
 import { AppComponent } from './app.component';
 import {MainComponent} from  './main/main.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import {HeaderComponent} from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -44,7 +48,10 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
-import { DialLoginComponent } from './dial-login/dial-login.component'
+
+import {UserService} from'./service/service'
+import { DialLoginComponent } from './dial-login/dial-login.component';
+import { UserListComponent } from './user-list/user-list.component'
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
@@ -64,6 +71,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     DialLoginComponent,
+    UserListComponent,
+
+
   ],
   entryComponents: [DialLoginComponent],
     exports: [
@@ -105,9 +115,9 @@ const appRoutes: Routes = [
     ]
   ,
   imports: [
+    FormsModule ,
     BrowserModule, RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }),
+      appRoutes),
       BrowserAnimationsModule,
       MatAutocompleteModule,
       MatBadgeModule,
@@ -144,8 +154,9 @@ const appRoutes: Routes = [
       MatToolbarModule,
       MatTooltipModule,
       MatTreeModule,
+      HttpClientModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,3 +31,9 @@ a:hover, a:active, a:focus { text-decoration:underline }
   .dialog .mat-tab-group,.dialog .mat-tab-group,.dialog .mat-tab-body-wrapper{
       height: 100%;
   }
+
+  ::selection {
+    background:#333333;
+    color: #FFF;
+    text-shadow: none;
+}
